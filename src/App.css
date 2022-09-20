@@ -38,17 +38,12 @@
   }
 }
 
-.Container {
-  color: brown;
-  background-color: cornflowerblue;
-  padding: 30px;
-  border-radius: 20px;
-}
 
-.person {
+
+.Container {
   color: rgb(221, 210, 202);
   background-color: crimson;
   padding: 20px;
   border-radius: 20px;
-  margin: 20px;
+  margin-top: 20px;
 }

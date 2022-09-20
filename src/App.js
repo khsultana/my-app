@@ -1,14 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
+const objectAll = [
+  { name: 'mahfuz', job: 'Singer' },
+  { name: 'mahAafuz', job: 'Singer' },
+  { name: 'AAAaamahfuz', job: 'Singer' },
+  { name: 'NNNNahfuz', job: 'Singer' },
+  { name: ' ahfuz', job: 'Singer' },
+];
 
-const myStyle = { backgroundColor: 'blue ' }
 function App() {
+
+
+  const array = ['apple', 'bapple', 'sapple', 'Loop', 'Normal']
+
   return (
     <div className="App">
-      <Person name="Natok korro"></Person>
-      <Person></Person>
-      <Person></Person>
-      <Friend></Friend>
+      {
+        objectAll.map(objet => <Person name={objet.name}  ></Person>)
+      }
+      {array.map(all => < Person name={all}> </Person>)}
+
+
+      {/* <Person name={array[0]} job="Java"></Person>
+      <Person name={array[1]} job="Java"></Person>
+      <Person name={array[2]} job="Java"></Person>
+      <Person name="BappaRaza" job="Nayok"></Person> */}
+
+      <Friends name="Click Me Here"></Friends>
     </div >
   );
 }
@@ -16,21 +34,23 @@ function App() {
 
 function Person(props) {
   console.log(props)
-  // return 
-  return (<div className='person'>
-    <h1>BanglaDesh </h1>
-    <p>Its our country</p>
-  </div>
+
+  return (
+    <div className='Container'>
+      <h1>{props.name}</h1>
+      <p>{props.job}</p>
+    </div>
   )
 }
 
-function Friend() {
+function Friends(props) {
   return (
-    <div className='Container'>
-      <h3>Name:Kh SUltaba</h3>
-      <p style={myStyle}>Job:Saradin Khate</p>
+    <div>
+      <button>{props.name}</button>
     </div>
+
   )
+
 }
 export default App;
 
